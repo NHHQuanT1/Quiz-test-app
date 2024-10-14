@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFx.bundle.view.GUI6_1_Controller">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-1.0" prefHeight="57.0" prefWidth="966.0" style="-fx-background-color: #009FE5;" />
+      <AnchorPane layoutX="33.0" layoutY="57.0" prefHeight="122.0" prefWidth="883.0" style="-fx-border-color: rgb(219, 221, 221);">
+         <children>
+            <Label layoutX="42.0" layoutY="76.0" prefHeight="30.0" prefWidth="69.0" text="Home " textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="113.0" layoutY="75.0" prefHeight="30.0" prefWidth="144.0" text="/    My courses   /">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="278.0" layoutY="75.0" prefHeight="30.0" prefWidth="111.0" text="THI CUỐI KỲ" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="389.0" layoutY="73.0" prefHeight="30.0" prefWidth="108.0" text="/   General   /" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNameQuiz" layoutX="506.0" layoutY="73.0" prefHeight="30.0" prefWidth="364.0" text="Thi thử giữa kỳ 2 môn Công nghệ" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="773.0" layoutY="21.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="50.0" style="-fx-background-color: none;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="4.0" layoutY="-5.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="92.0" prefWidth="124.0" style="-fx-background-color: none;" text="IT" textFill="#c71d1d">
+               <font>
+                  <Font name="Tahoma" size="51.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="196.0" prefHeight="561.0" prefWidth="883.0" style="-fx-border-color: rgb(219, 221, 221);">
+         <children>
+            <Label fx:id="quizName" layoutX="31.0" layoutY="6.0" prefHeight="63.0" prefWidth="766.0" text="Thi giữa kỳ 2 môn Công nghệ" textFill="#c71d1d">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="810.0" layoutY="3.0" mnemonicParsing="false" onAction="#switchToGUI6_2a" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: null;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Img.img/setting.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="14.0" fitWidth="13.0" layoutX="859.0" layoutY="15.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Img.img/setting%20dropdown.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelTimeLimit" layoutX="639.0" layoutY="102.0" prefHeight="27.0" prefWidth="204.0" text="Time limit: 1 hour">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="203.0" prefHeight="35.0" prefWidth="395.0" text="Summary of your previous attempts" textFill="#c71d1d">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="31.0" layoutY="253.0" prefHeight="55.0" prefWidth="820.0" style="-fx-background-color: #009FE5 #009FE5;">
+               <children>
+                  <Label layoutX="183.0" layoutY="18.0" text="Attempt" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="13.0" prefHeight="30.0" prefWidth="69.0" text="State" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="31.0" layoutY="308.0" prefHeight="55.0" prefWidth="820.0" style="-fx-background-color: #EEEEEE;">
+               <children>
+                  <Label layoutX="183.0" layoutY="18.0" opacity="0.8" text="Preview">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="410.0" layoutY="18.0" opacity="0.8" prefHeight="30.0" prefWidth="157.0" text="Never submitted">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="openButton" layoutX="619.0" layoutY="399.0" mnemonicParsing="false" onAction="#openChildStage1" prefHeight="43.0" prefWidth="224.0" style="-fx-background-color: #009FE5 #009FE5;" text="PREVIEW QUIZ NOW" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="539.0" layoutY="470.0" prefHeight="35.0" prefWidth="144.0" style="-fx-border-color: #514b4b;" text="   Jump to...">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="13.0" layoutX="654.0" layoutY="478.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Img.img/pngegg%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="626.0" layoutY="135.0" text="Grading method: Last attempt">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

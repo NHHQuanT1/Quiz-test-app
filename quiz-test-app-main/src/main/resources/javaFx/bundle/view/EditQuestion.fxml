@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFx.bundle.view.EditQuestion">
+   <children>
+      <AnchorPane layoutX="-6.0" layoutY="-1.0" prefHeight="39.0" prefWidth="966.0" style="-fx-background-color: #009FE5;" />
+      <AnchorPane layoutX="9.0" layoutY="46.0" onMouseClicked="#displayTreeViewOff" prefHeight="98.0" prefWidth="966.0" style="-fx-border-color: rgb(219, 221, 221);">
+         <children>
+            <Label layoutX="20.0" layoutY="59.0" prefHeight="30.0" prefWidth="69.0" text="Home " textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="83.0" layoutY="58.0" prefHeight="30.0" prefWidth="144.0" text="/    My courses   /">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="238.0" layoutY="59.0" prefHeight="30.0" prefWidth="131.0" text="THI CUỐI KỲ  /" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button layoutX="5.0" layoutY="-11.0" mnemonicParsing="false" onAction="#switchToSceneList" prefHeight="83.0" prefWidth="126.0" style="-fx-background-color: none;" text="IT" textFill="#c71d1d">
+               <font>
+                  <Font name="Tahoma" size="40.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="364.0" layoutY="57.0" onMouseClicked="#switchToQuestionBank" prefHeight="30.0" prefWidth="134.0" text="Question Bank" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="499.0" layoutY="57.0" onMouseClicked="#switchToQuestionList" prefHeight="30.0" prefWidth="121.0" text="/  Questions  /" textFill="#c71d1d">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label layoutX="620.0" layoutY="54.0" prefHeight="35.0" prefWidth="302.0" text="Editing a Multiple choice question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="165.0" prefHeight="658.0" prefWidth="939.0" style="-fx-border-color: rgb(219, 221, 221);">
+         <children>
+            <Label layoutX="21.0" layoutY="15.0" prefHeight="47.0" prefWidth="466.0" text="Editing Multiple choice question" textFill="#c71d1d">
+               <font>
+                  <Font name="Gill Sans MT" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="67.0" prefHeight="29.0" prefWidth="101.0" text="General" textFill="#c71d1d">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Img.img/arrowblue.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="52.0" layoutY="108.0" prefHeight="26.0" prefWidth="91.0" text="Category">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="151.0" prefHeight="27.0" prefWidth="141.0" text="Question name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="193.0" prefHeight="27.0" prefWidth="141.0" text="Question text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel" layoutX="561.0" layoutY="108.0" onMouseClicked="#displayTreeView" prefHeight="35.0" prefWidth="292.0" style="-fx-border-color: #514b4b;" text="   Default">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="560.0" layoutY="150.0" prefHeight="35.0" prefWidth="295.0" style="-fx-border-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="questionText" layoutX="560.0" layoutY="198.0" prefHeight="82.0" prefWidth="276.0" style="-fx-border-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextArea>
+            <ImageView fitHeight="13.0" fitWidth="9.0" layoutX="824.0" layoutY="120.0" opacity="0.68" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Img.img/pngegg%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="51.0" layoutY="281.0" prefHeight="27.0" prefWidth="141.0" text="Default mark">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="93.0" layoutY="345.0" mnemonicParsing="false" onAction="#getMoreChoice" prefHeight="40.0" prefWidth="282.0" style="-fx-background-color: #009FE5;" text="BLANK FOR ONE MORE CHOICE" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="63.0" layoutY="396.0" mnemonicParsing="false" onAction="#saveChangesAndContinueEditting" prefHeight="42.0" prefWidth="342.0" style="-fx-background-color: #009FE5;" text="SAVE CHANGES AND CONTINUE EDITING" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="270.0" layoutY="454.0" mnemonicParsing="false" onAction="#switchToSceneList" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #009FE5;" text="CANCEL" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="90.0" layoutY="454.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="35.0" prefWidth="154.0" style="-fx-background-color: #c71d1d;" text="SAVE CHANGES" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField layoutX="562.0" layoutY="283.0" prefHeight="42.0" prefWidth="95.0" style="-fx-border-color: white;" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TreeView fx:id="categoryTreeView" layoutX="562.0" layoutY="144.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="286.0" prefWidth="350.0" style="-fx-background-color: none;" visible="false" />
+            <Button layoutX="156.0" layoutY="512.0" mnemonicParsing="false" onAction="#previewQuestion" style="-fx-background-color: #03dbfc;" text="Preview Question">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fx:id="brokenImage" fitHeight="41.0" fitWidth="35.0" layoutX="837.0" layoutY="230.0" onMouseClicked="#chooseImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Img.img/broken%20image.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="505.0" layoutY="499.0" prefHeight="277.0" prefWidth="417.0">
+         <content>
+            <VBox fx:id="moreChoice" prefHeight="1203.0" prefWidth="421.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
